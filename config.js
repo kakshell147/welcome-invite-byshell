@@ -1,6 +1,6 @@
 module.exports = {
-    TOKEN: 'توكن',    
+    TOKEN: '',    
     YT_API_KEY: 'api ',
-    prefix: 'برافكس',
-    devs: ['اى دى انت']
+    prefix: '',
+    devs: ['ownerid']
 }
