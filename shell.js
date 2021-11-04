@@ -6,11 +6,11 @@ app.get("/", (request, response) => {
 });
 app.listen(process.env.PORT);
 setInterval(() => {
-  http.get(`http://اسم بروجكيت.glitch.me/`);
+  http.get(``);
 }, 280000);
 
 
-// كل البكجات الي ممكن تحتجها في اي بوت
+// 
 
 const { Client, RichEmbed } = require("discord.js");
 var { Util } = require('discord.js');
@@ -78,7 +78,7 @@ client.on("message", async message => {
       });
 
     message.channel
-      .send(":pencil: **| من فضلك اكتب الرساله الان... :pencil2: **")
+      .send(":pencil: **| ... :pencil2: **")
       .then(msg => {
         message.channel
           .awaitMessages(filter, {
@@ -91,7 +91,7 @@ client.on("message", async message => {
             thisMessage = collected.first().content;
             let boi;
             msg
-              .edit(":scroll: **| اكتب اسم الروم الان... :pencil2: **")
+              .edit(":scroll: **| ... :pencil2: **")
               .then(msg => {
                 message.channel
                   .awaitMessages(filter, {
@@ -102,7 +102,7 @@ client.on("message", async message => {
                   .then(collected => {
                     collected.first().delete();
                     boi = collected.first().content;
-                    msg.edit("✅ **| تم الاعداد بنجاح...  **").then(msg => {
+                    msg.edit("✅ **| ...  **").then(msg => {
                       message.channel.awaitMessages(filter, {
                         max: 1,
                         time: 90000,
